@@ -9,7 +9,10 @@ resource "aws_subnet" "private-us-east-1a" {
     Name                              = "private-us-east-1a"
     "kubernetes.io/role/internal-elb" = "1"
     "kubernetes.io/cluster/demo"      = "owned"
+    # "kubernetes.io/cluster/${var.cluster_name}-eks-cluster" = "shared"
   }
+
+  depends_on = [ aws_vpc.k8svpc ]
 }
 # private subnet 02
 
@@ -22,7 +25,10 @@ resource "aws_subnet" "private-us-east-1b" {
     Name                              = "private-us-east-1b"
     "kubernetes.io/role/internal-elb" = "1"
     "kubernetes.io/cluster/demo"      = "owned"
+    # "kubernetes.io/cluster/${var.cluster_name}-eks-cluster" = "shared"
   }
+
+  depends_on = [ aws_vpc.k8svpc ]
 }
 
 # public subnet 01
@@ -37,7 +43,10 @@ resource "aws_subnet" "public-us-east-1a" {
     Name                         = "public-us-east-1a"
     "kubernetes.io/role/elb"     = "1" #this instruct the kubernetes to create public load balancer in these subnets
     "kubernetes.io/cluster/demo" = "owned"
+    # "kubernetes.io/cluster/${var.cluster_name}-eks-cluster" = "shared"
   }
+
+  depends_on = [ aws_vpc.k8svpc ]
 }
 # public subnet 02
 
@@ -51,5 +60,8 @@ resource "aws_subnet" "public-us-east-1b" {
     Name                         = "public-us-east-1b"
     "kubernetes.io/role/elb"     = "1" #this instruct the kubernetes to create public load balancer in these subnets
     "kubernetes.io/cluster/demo" = "owned"
+    # "kubernetes.io/cluster/${var.cluster_name}-eks-cluster" = "shared"
   }
+
+  depends_on = [ aws_vpc.k8svpc ]
 }

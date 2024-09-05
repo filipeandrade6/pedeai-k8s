@@ -4,4 +4,9 @@ resource "aws_internet_gateway" "k8svpc-igw" {
   tags = {
     Name = "k8svpc-igw"
   }
+
+  depends_on = [ 
+    aws_vpc.k8svpc
+  ]
+
 }

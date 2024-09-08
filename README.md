@@ -5,17 +5,17 @@ Repository to provision Kubernetes cluster in AWS EKS (Elastic Kubernetes Servic
 ### Terraform modules
 
 - **eks**: EKS cluster.
-- **network**: VPCs, internet gateway, subnets, elastic IPs, NAT gateway, route tables, table associations.
+- **network**: VPCs, internet gateway, subnets, elastic IPs, NAT gateway, route tables and table associations.
 - **nodes**: managed node group.
 
 ### How to use
 
-With *terraform* and *aws CLI* installed.
+With *terraform* and *aws CLI* installed and configured.
 
 To create:
 
 - `terraform init` to initialize
-- `terraform plan` to plan deploy
+- `terraform plan` to plan the deploy
 - `terraform apply` to create resources
 
 To destroy:

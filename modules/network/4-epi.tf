@@ -12,7 +12,7 @@ resource "aws_eip" "eip2" {
   domain = "vpc"
 
   tags = {
-    Name = "${var.eip_name}-a"
+    Name = "${var.eip_name}-b"
   }
 
   depends_on = [ aws_internet_gateway.igw ]

@@ -6,7 +6,7 @@ resource "aws_nat_gateway" "nat1" {
     Name = "${var.nat_name}-a"
   }
 
-  depends_on = [aws_internet_gateway.igw]
+  depends_on = [ aws_internet_gateway.igw ]
 }
 
 resource "aws_nat_gateway" "nat2" {
@@ -17,5 +17,5 @@ resource "aws_nat_gateway" "nat2" {
     Name = "${var.nat_name}-b"
   }
 
-  depends_on = [aws_internet_gateway.igw]
+  depends_on = [ aws_internet_gateway.igw ]
 }

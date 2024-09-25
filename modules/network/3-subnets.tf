@@ -1,7 +1,7 @@
 # private subnet 1
 resource "aws_subnet" "private-a" {
   vpc_id            = aws_vpc.vpc.id
-  cidr_block        = "192.168.0.0/24"
+  cidr_block        = "10.0.0.0/24"
   availability_zone = "us-east-1a"
 
   tags = {
@@ -16,7 +16,7 @@ resource "aws_subnet" "private-a" {
 # private subnet 2
 resource "aws_subnet" "private-b" {
   vpc_id            = aws_vpc.vpc.id
-  cidr_block        = "192.168.32.0/24"
+  cidr_block        = "10.0.32.0/24"
   availability_zone = "us-east-1b"
 
   tags = {
@@ -31,7 +31,7 @@ resource "aws_subnet" "private-b" {
 # public subnet 1
 resource "aws_subnet" "public-a" {
   vpc_id                  = aws_vpc.vpc.id
-  cidr_block              = "192.168.64.0/24"
+  cidr_block              = "10.0.64.0/24"
   availability_zone       = "us-east-1a"
   map_public_ip_on_launch = true
 
@@ -47,7 +47,7 @@ resource "aws_subnet" "public-a" {
 # public subnet 2
 resource "aws_subnet" "public-b" {
   vpc_id                  = aws_vpc.vpc.id
-  cidr_block              = "192.168.96.0/24"
+  cidr_block              = "10.0.96.0/24"
   availability_zone       = "us-east-1b"
   map_public_ip_on_launch = true
 

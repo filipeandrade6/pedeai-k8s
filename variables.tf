@@ -3,5 +3,5 @@ variable "region_name" {
 }
 
 variable "cluster_name" {
-    default = "pedeai"
+    default = "fiap44"
 }

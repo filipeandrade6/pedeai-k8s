@@ -10,7 +10,14 @@ Repository to provision Kubernetes cluster in AWS EKS (Elastic Kubernetes Servic
 
 ### How to use
 
-With *terraform* and *aws CLI* installed.
+#### Github Actions
+
+- Configure the repository secrets.
+- Go to actions and manually run **Provision k8s Cluster and Ingress/LB** Github Action.
+
+#### Locally
+
+With **terraform** and **aws CLI** installed.
 
 Configure aws credentials:
 

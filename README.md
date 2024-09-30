@@ -13,7 +13,7 @@ Repository to provision Kubernetes cluster in AWS EKS (Elastic Kubernetes Servic
 #### Github Actions
 
 - Configure the repository secrets.
-- Go to actions and manually run **Provision k8s Cluster and Ingress/LB** Github Action.
+- PR to main branch or go to actions and manually run **Provision k8s Cluster and Ingress/LB** Github Action.
 
 #### Locally
 
